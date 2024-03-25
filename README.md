@@ -3,12 +3,6 @@
 ## Installation
 
 ```bash
-$ npm install
-```
-
-or using yarn
-
-```bash
 $ yarn
 ```
 
@@ -16,26 +10,23 @@ $ yarn
 
 ```bash
 # development
-$ npm run start
+$ yarn start
 
 # watch mode
-$ npm run start:dev
+$ yarn start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
+$ yarn test
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
 
 ## Env configuration
@@ -52,7 +43,7 @@ API_HOST=0.0.0.0 (optional string, default 0.0.0.0)
 
 ```
 # cors
-CORS_ALLOWED_ORIGING=string (optional string, default *, for eg. http://localhost:3000, https://domain.com)
+CORS_ALLOWED_ORIGING=string (optional string, default *, for eg. http://localhost:3000)
 ```
 
 ```
