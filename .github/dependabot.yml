@@ -6,22 +6,25 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'thursday'
+    commit-message:
+      prefix: 'chore(dependencies)'
+      prefix-development: 'chore(dev-dependencies)'
     groups:
-      prod-minor-and-patch-dependencies:
+      prod-dependencies-minor-and-patch:
         dependency-type: 'production'
         update-types:
         - 'minor'
         - 'patch'
-      dev-minor-and-patch-dependencies:
+      dev-dependencies-minor-and-patch:
         dependency-type: 'development'
         update-types: 
         - 'minor'
         - 'patch'
-      prod-major-dependencies:
+      prod-dependencies-major:
         dependency-type: 'production'
         update-types:
         - 'major'
-      dev-major-dependencies:
+      dev-dependencies-major:
         dependency-type: 'development'
         update-types:
         - 'major'
@@ -31,3 +34,5 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'thursday'
+    commit-message:
+      prefix: 'chore(github-actions)'
