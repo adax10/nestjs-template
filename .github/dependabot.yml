@@ -1,10 +1,31 @@
 version: 2
+
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'weekly'
       day: 'thursday'
+    groups:
+      prod-minor-and-patch-dependencies:
+        dependency-type: 'production'
+        update-types:
+        - 'minor'
+        - 'patch'
+      dev-minor-and-patch-dependencies:
+        dependency-type: 'development'
+        update-types: 
+        - 'minor'
+        - 'patch'
+      prod-major-dependencies:
+        dependency-type: 'production'
+        update-types:
+        - 'major'
+      dev-major-dependencies:
+        dependency-type: 'development'
+        update-types:
+        - 'major'
+
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
