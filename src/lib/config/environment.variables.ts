@@ -1,12 +1,11 @@
-import { IsEnum, IsInt, IsNumber, IsOptional, IsString, ValidateIf } from 'class-validator'
+import { IsBooleanString, IsInt, IsNumber, IsOptional, IsString, ValidateIf } from 'class-validator'
 import { Type } from 'class-transformer'
 import { toBoolean } from 'lib/utils'
-import { NodeEnv } from './constants'
 
 export class EnvironmentVariables {
     @IsOptional()
-    @IsEnum(NodeEnv)
-    readonly NODE_ENV: NodeEnv = NodeEnv.Development
+    @IsString()
+    readonly NODE_ENV: 'development' | 'production' = 'development'
 
     @IsOptional()
     @IsNumber()
@@ -14,7 +13,7 @@ export class EnvironmentVariables {
 
     @IsOptional()
     @IsString()
-    readonly API_HOST: string = '0.0.0.0'
+    readonly API_HOST: string = 'localhost'
 
     @IsOptional()
     @IsString()
@@ -38,11 +37,11 @@ export class EnvironmentVariables {
     readonly MAX_FILE_SIZE_KB: number = 20 * 1024 * 1024
 
     @Type(() => String)
-    @IsString()
+    @IsBooleanString()
     readonly USE_LOGS: string = 'true'
 
     @Type(() => String)
-    @IsString()
+    @IsBooleanString()
     readonly USE_SWAGGER: string = 'true'
 
     @ValidateIf(value => toBoolean(value.USE_SWAGGER))
