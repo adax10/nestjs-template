@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'thursday'
-      time: '03:00'
+      time: '15:10'
       timezone: 'Europe/Warsaw'
     commit-message:
       prefix: 'chore(dependencies)'
