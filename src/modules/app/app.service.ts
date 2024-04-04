@@ -7,9 +7,9 @@ export class AppService implements OnApplicationBootstrap, OnApplicationShutdown
     private readonly logger = new Logger(LOGGER_CONTEXT)
 
     onApplicationBootstrap() {
-        const { port } = getConfig().basicConfig.expressConfig
+        const { expressConfig, swaggerConfig } = getConfig().basicConfig
 
-        this.logger.log(`${BOOTSTRAP_MESSAGE}: ${port}`)
+        this.logger.log(BOOTSTRAP_MESSAGE(expressConfig, swaggerConfig))
     }
 
     onApplicationShutdown() {

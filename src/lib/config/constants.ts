@@ -1,8 +1,3 @@
-export enum NodeEnv {
-    Development = 'development',
-    Production = 'production'
-}
-
 export enum TimeIntervalMs {
     Second = 1000,
     Minute = TimeIntervalMs.Second * 60,
