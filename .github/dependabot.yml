@@ -36,7 +36,7 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'thursday'
-      time: '15:35'
+      time: '03:00'
       timezone: 'Europe/Warsaw'
     commit-message:
       prefix: 'chore(github-actions)'
