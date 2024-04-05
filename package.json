@@ -21,7 +21,8 @@
         "prepare": "husky",
         "precommit": "yarn build && yarn test && yarn lint",
         "format": "yarn prettier -w ./src",
-        "format:check": "yarn prettier --check ./src"
+        "format:check": "yarn prettier --check ./src",
+        "docker-build": "docker build --build-arg NODE_VERSION=$(cat .nvmrc | sed 's/v//') -t api-starter ."
     },
     "dependencies": {
         "@nestjs/common": "10.3.7",
