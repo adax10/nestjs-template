@@ -37,7 +37,7 @@
         "date-fns": "3.6.0",
         "helmet": "7.1.0",
         "morgan": "1.10.0",
-        "ramda": "0.29.1",
+        "ramda": "0.30.0",
         "reflect-metadata": "0.2.2",
         "rxjs": "7.8.1"
     },
