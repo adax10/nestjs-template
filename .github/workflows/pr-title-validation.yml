@@ -14,7 +14,7 @@ concurrency:
 jobs:
   main:
     name: Validate PR title
-    runs-on: [self-hosted, linux, x64, default]
+    runs-on: ubuntu-latest
     permissions:
       pull-requests: read
     timeout-minutes: 5 
