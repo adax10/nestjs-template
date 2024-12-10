@@ -7,6 +7,7 @@ describe('ramda utils', () => {
             const subject2 = 12
             const subject3 = 'string'
             const subject4 = {}
+            // eslint-disable-next-line no-empty-function
             const subject5 = () => {}
 
             expect(hasElements(subject1)).toBeFalsy()
