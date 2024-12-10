@@ -50,6 +50,7 @@
         "@nestjs/cli": "10.4.9",
         "@nestjs/schematics": "10.2.3",
         "@nestjs/testing": "10.4.15",
+        "@stylistic/eslint-plugin": "2.12.0",
         "@types/express": "5.0.0",
         "@types/jest": "29.5.14",
         "@types/morgan": "1.9.9",
@@ -59,8 +60,13 @@
         "@typescript-eslint/eslint-plugin": "8.18.0",
         "@typescript-eslint/parser": "8.18.0",
         "conventional-changelog-conventionalcommits": "8.0.0",
-        "eslint": "8.57.0",
+        "eslint": "9.16.0",
         "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-functional": "7.1.0",
+        "eslint-plugin-import": "2.31.0",
+        "eslint-plugin-nested-if": "1.0.0",
+        "eslint-plugin-no-else": "0.2.2",
+        "eslint-plugin-prefer-arrow": "1.2.3",
         "eslint-plugin-prettier": "5.2.1",
         "husky": "9.1.7",
         "jest": "29.7.0",
@@ -72,7 +78,8 @@
         "ts-loader": "9.5.1",
         "ts-node": "10.9.2",
         "tsconfig-paths": "4.2.0",
-        "typescript": "5.7.2"
+        "typescript": "5.7.2",
+        "typescript-eslint": "8.18.0"
     },
     "jest": {
         "moduleFileExtensions": [
