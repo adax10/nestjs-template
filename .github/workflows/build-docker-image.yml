@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: [self-hosted, linux, x64, default]
+  build-image:
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout
