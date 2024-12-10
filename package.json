@@ -17,6 +17,7 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
+        "test:cov-services": "jest --coverage --collectCoverageFrom='modules/**/*.{service.ts,utils.ts}' --coveragePathIgnorePatterns='modules/.*/app.service.ts' --runInBand",
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
         "prepare": "husky",
         "precommit": "yarn build && yarn test && yarn lint",
