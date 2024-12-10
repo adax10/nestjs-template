@@ -2,6 +2,7 @@ import { plainToInstance } from 'class-transformer'
 import { validateSync } from 'class-validator'
 import { EnvironmentVariables } from './environment.variables'
 
+// eslint-disable-next-line @typescript-eslint/no-restricted-types
 export const envValidation = (config: Record<string, unknown>) => {
     const validatedConfig = plainToInstance(EnvironmentVariables, config, { enableImplicitConversion: true })
 
