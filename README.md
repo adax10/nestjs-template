@@ -36,34 +36,34 @@ NODE_ENV=development|production (optional enum NodeEnv, default development)
 ```
 
 ```
-# express
+# Express
 API_PORT=3000 (optional number, default 3000)
 API_HOST=0.0.0.0 (optional string, default 0.0.0.0)
 ```
 
 ```
-# cors
+# CORS
 CORS_ALLOWED_ORIGING=string (optional string, default *, for eg. http://localhost:3000)
 ```
 
 ```
-# throttler
+# Throttler
 THROTTLER_LIMIT=100 (optional number, default 100 - count of request in time window)
 THROTTLER_TTL_S=60 (optional number, default 60 - time window)
 ```
 
 ```
-# body parser
+# bBody parser
 MAX_FILE_SIZE_KB=20971520 (optional number, default 20971520 - 20MB)
 ```
 
 ```
-# morgan
+# Morgan
 USE_LOGS=boolean (optional boolean, default true)
 ```
 
 ```
-# swagger config
+# Swagger config
 USE_SWAGGER=true (optional boolean, default true)
 SWAGGER_ROUTE=/swagger (required string, if USE_SWAGGER true)
 ```
@@ -100,7 +100,8 @@ or:
 trivy fs . --db-repository public.ecr.aws/aquasecurity/trivy-db \
           --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
           --severity CRITICAL,HIGH \
-          --db-repository public.ecr.aws/aquasecurity/trivy-db --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --db-repository public.ecr.aws/aquasecurity/trivy-db \
+          --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
           --exit-code 1 \
           --scanners vuln,secret,config \
           --ignore-unfixed \
@@ -120,7 +121,8 @@ or:
 trivy image --db-repository public.ecr.aws/aquasecurity/trivy-db \
           --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
           --severity CRITICAL,HIGH \
-          --db-repository public.ecr.aws/aquasecurity/trivy-db --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --db-repository public.ecr.aws/aquasecurity/trivy-db \
+          --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
           --exit-code 1 \
           --ignore-unfixed \
           api-starter:latest
