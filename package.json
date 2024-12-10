@@ -22,7 +22,10 @@
         "precommit": "yarn build && yarn test && yarn lint",
         "format": "yarn prettier -w ./src",
         "format:check": "yarn prettier --check ./src",
-        "docker-build": "docker build --build-arg NODE_VERSION=$(cat .nvmrc | sed 's/v//') -t api-starter ."
+        "docker-build": "docker build --build-arg NODE_VERSION=$(cat .nvmrc | sed 's/v//') -t api-starter .",
+        "trivy-install": "curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin",
+        "trivy-file-scan": "trivy fs . --severity CRITICAL,HIGH --exit-code 1 --scanners vuln,secret,config --ignore-unfixed --pkg-types os,library",
+        "trivy-image-scan": "yarn docker-build && trivy image --severity CRITICAL,HIGH --exit-code 1 --ignore-unfixed api-starter:latest"
     },
     "dependencies": {
         "@nestjs/common": "10.3.10",
