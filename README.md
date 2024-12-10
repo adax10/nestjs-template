@@ -67,3 +67,63 @@ USE_LOGS=boolean (optional boolean, default true)
 USE_SWAGGER=true (optional boolean, default true)
 SWAGGER_ROUTE=/swagger (required string, if USE_SWAGGER true)
 ```
+
+## Trivy Vulnerability Scan
+
+Trivy is a comprehensive vulnerability scanner for containers and other artifacts. It's used in CI/CD pipelines to scan Docker images and code 🔐.
+
+### Installation
+
+1. Install trivy
+
+```bash
+yarn trivy-install
+```
+
+or:
+
+```bash
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+```
+
+If you have any problems with installation, please refer to [documentation](https://trivy.dev/v0.57/getting-started/installation/).
+
+2. Test code in your local machine
+
+```bash
+yarn trivy-file-scan
+```
+
+or:
+
+```bash
+trivy fs . --db-repository public.ecr.aws/aquasecurity/trivy-db \
+          --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --severity CRITICAL,HIGH \
+          --db-repository public.ecr.aws/aquasecurity/trivy-db --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --exit-code 1 \
+          --scanners vuln,secret,config \
+          --ignore-unfixed \
+          --pkg-types os,library
+```
+
+3. Run trivy to scan the image
+
+```bash
+yarn trivy-image-scan
+```
+
+or:
+
+```bash
+# this command should be after docker build
+trivy image --db-repository public.ecr.aws/aquasecurity/trivy-db \
+          --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --severity CRITICAL,HIGH \
+          --db-repository public.ecr.aws/aquasecurity/trivy-db --java-db-repository public.ecr.aws/aquasecurity/trivy-java-db \
+          --exit-code 1 \
+          --ignore-unfixed \
+          api-starter:latest
+```
+
+Optionally you can add `--format json` to get the output in JSON format.
