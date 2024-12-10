@@ -12,7 +12,6 @@ updates:
       prefix-development: 'build(dev-dependencies)'
     ignore:
       - dependency-name: '@nestjs/throttler'
-      - dependency-name: 'eslint'
     groups:
       prod-dependencies-minor-and-patch:
         dependency-type: 'production'
