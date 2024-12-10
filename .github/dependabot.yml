@@ -8,8 +8,11 @@ updates:
       time: '03:00'
       timezone: 'Europe/Warsaw'
     commit-message:
-      prefix: 'chore(dependencies)'
-      prefix-development: 'chore(dev-dependencies)'
+      prefix: 'build(prod-dependencies)'
+      prefix-development: 'build(dev-dependencies)'
+    ignore:
+      - dependency-name: '@nestjs/throttler'
+      - dependency-name: 'eslint'
     groups:
       prod-dependencies-minor-and-patch:
         dependency-type: 'production'
@@ -37,4 +40,4 @@ updates:
       time: '03:00'
       timezone: 'Europe/Warsaw'
     commit-message:
-      prefix: 'chore(github-actions)'
+      prefix: 'build(github-actions)'
