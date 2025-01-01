@@ -46,24 +46,24 @@
         "rxjs": "7.8.1"
     },
     "devDependencies": {
-        "@commitlint/cli": "19.6.0",
+        "@commitlint/cli": "19.6.1",
         "@commitlint/config-conventional": "19.6.0",
         "@nestjs/cli": "10.4.9",
         "@nestjs/schematics": "10.2.3",
         "@nestjs/testing": "10.4.15",
-        "@stylistic/eslint-plugin": "2.12.0",
+        "@stylistic/eslint-plugin": "2.12.1",
         "@types/express": "5.0.0",
         "@types/jest": "29.5.14",
         "@types/morgan": "1.9.9",
-        "@types/node": "22.10.1",
+        "@types/node": "22.10.3",
         "@types/ramda": "0.30.2",
         "@types/supertest": "6.0.2",
-        "@typescript-eslint/eslint-plugin": "8.18.0",
-        "@typescript-eslint/parser": "8.18.0",
+        "@typescript-eslint/eslint-plugin": "8.19.0",
+        "@typescript-eslint/parser": "8.19.0",
         "conventional-changelog-conventionalcommits": "8.0.0",
         "eslint": "9.16.0",
         "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-functional": "7.1.0",
+        "eslint-plugin-functional": "7.2.0",
         "eslint-plugin-import": "2.31.0",
         "eslint-plugin-nested-if": "1.0.0",
         "eslint-plugin-no-else": "0.2.2",
@@ -80,7 +80,7 @@
         "ts-node": "10.9.2",
         "tsconfig-paths": "4.2.0",
         "typescript": "5.7.2",
-        "typescript-eslint": "8.18.0"
+        "typescript-eslint": "8.19.0"
     },
     "jest": {
         "moduleFileExtensions": [
