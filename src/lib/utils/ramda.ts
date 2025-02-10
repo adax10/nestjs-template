@@ -25,8 +25,7 @@ import {
 } from 'ramda'
 
 const hasElements = <T>(subject: T) => (Array.isArray(subject) ? subject.length > 0 : false)
-const hasKeys = <T>(subject: T) =>
-    typeof subject === 'object' && subject !== null ? Object.keys(subject as object).length > 0 : false
+const hasKeys = <T>(subject: T) => (typeof subject === 'object' && subject !== null ? Object.keys(subject as object).length > 0 : false)
 const isDefined = <T>(subject: T): subject is NonNullable<T> => typeof subject !== 'undefined' && subject !== null
 const notNil = <T>(subject: T) => !isNil(subject)
 // eslint-disable-next-line functional/functional-parameters
